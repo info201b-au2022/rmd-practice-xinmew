@@ -1,22 +1,22 @@
 ---
-title: "Example Covid Report"
-author: "INFO-201: Class Demo"
-date: "2/7/2022"
+title: "X10 COVID Cases Report"
+author: "INFO 201: Simon Wang"
+date: "11/2/2022"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-source("../source/analysis.R")
-knitr::opts_chunk$set(echo = TRUE)
+```{R setup, include=FALSE}
+source("analysis.R")
 ```
-
-## Covid Report
-I write a paragraph here. I will highlight that the total number of US cases is `r get_total_cases()`. And, the total number of US deaths is `r get_total_deaths()`. 
-
-(**Note**: Why are there no commas in the *total number of US deaths* ? Can you change `analysis.R` file so that the number is commented with commas?)
-
-I also want to show the chart:
-``` {r echo=FALSE}
+The total number of the COVID cases in the U.S. is
+```{R}
+get_total_cases()
+```
+The total number of deaths due to COVID in the U.S. is
+```{R}
+get_total_deaths()
+```
+Below is a plot of the number of cases
+```{R}
 cases_plot
 ```
-
